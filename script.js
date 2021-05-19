@@ -495,3 +495,8 @@ const combinado = primeiro.concat(segundo);
 console.log(primeiro);
 console.log(segundo);
 console.log(combinado);
+
+
+combinado.splice()
+
+fdgsdf gsdf
