@@ -492,11 +492,47 @@ const segundo = [5,6,7,8];
 const combinado = primeiro.concat(segundo);
 
 
-console.log(primeiro);
-console.log(segundo);
-console.log(combinado);
+// console.log(primeiro);
+// console.log(segundo);
+// console.log(combinado);
 
 
-combinado.splice()
+// combinado.splice()
 
-fdgsdf gsdf
+const cliente = {
+    nome:"Hailton Nascimento",
+    cpf: "444.555.888-91",
+    nascimento: '16/05/1982',
+    telefone:'11911987654321',
+    endereco:{
+        rua:'Avenida são joão',
+        cidade: "Sao Paulo",
+        estado: 'SP',
+        pais: "Brasil",
+    },
+};
+
+var endereço = [];
+
+ endereço = {...cliente.endereco};
+ console.log(endereço);
+
+
+ const {nome, cpf, nascimento, telefone, endereco:{rua,cidade,estado,pais}} = cliente;
+
+ console.log(
+    nome, 
+    cpf, 
+    nascimento,
+    telefone,
+    rua,
+    cidade,
+    estado,
+    pais
+ );
+
+ function imprimeEmdereçoCliente({endereco:{rua,cidade,estado,pais}}){
+     console.log(`Rua:${rua}, Cidade:${cidade} - ${estado}
+                    ${pais}`);
+ }
+ imprimeEmdereçoCliente(cliente);
