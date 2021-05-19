@@ -317,13 +317,13 @@ let postagem = {
     autor: "Jose Ferreira",
     visualizacoes: 10,
     comentarios:[
-        {autor:"luiz",mesnagem:"O Leite ta caro"},
-        {autor:"Pedro",mesnagem:"Toma cafe ao inves de leite"}
+        {autor:"luiz",mensagem:"O Leite ta caro"},
+        {autor:"Pedro",mensagem:"Toma cafe ao inves de leite"}
     ],
     estaAoVivo: true
 }
 
-exibirPostagem(postagem);
+//exibirPostagem(postagem);
 
 function exibirPostagem(postagem){
     for(chave in postagem){
@@ -341,3 +341,157 @@ function exibirPostagem(postagem){
 
     }
 }
+
+
+function Postagem(titulo,mensagem,autor){
+    this.titulo = titulo,
+    this.mensagem = mensagem,
+    this.autor = autor,
+    this.visualizacoes = 0,
+    this.comentarios =[],
+    this.estaAoVivo = false
+}
+
+let postagem1 = new Postagem("Cotidiano","Foi dificil acordar hoje","Hailton Nascimento")
+
+//exibirPostagem(postagem1);
+
+postagem1.comentarios.push({autor:"jose",mensagem:"putz!! nem me fale, ainda estou tentando levantar da cama"});
+
+//exibirPostagem(postagem1);
+
+
+// faixa de preços
+
+
+//primeria opções
+ function Faixas (valor){
+     this.maximo = (valor+100),
+     this.minimo = (valor-100),
+     this.dica = `de ${this.minimo} até ${this.maximo}`
+ }
+
+
+ let faixas=[];
+    faixas.push(new Faixas (500));
+    faixas.push(new Faixas (700));
+    faixas.push(new Faixas (900));
+
+//console.log(faixas);
+
+
+
+// const alunos = ["hailton","lucas","Thiago","Lisberto"];
+
+// console.log(alunos.indexOf("hailtom"));
+
+// console.log(alunos.includes("lucas"));
+
+
+
+
+// var ages1= ages;
+
+// ages.forEach(element => {
+//    element+=1; 
+//    console.log(element);
+// });
+// console.log(ages)
+
+// for (let index = 0; index < ages.length; index++) {
+//     ages[index]=ages[index]+1;
+    
+// }
+// for( idade of ages){
+//     idade+=idade+1;
+// }
+//ages1 = ages.map(value=>value+1);
+
+
+// for(idade of ages1){
+//     idade+=1;
+//     console.log(idade);
+// }
+// console.log(ages)
+
+// const impares = ages.filter(valor => valor%2==1);
+// console.log(impares);
+// const pares = ages.filter(valor=>valor%2==0);
+// console.log(pares);
+
+// ages = ages.map(valor =>valor%2==1?valor+1:valor);
+
+// ages = ages.map(valor =>{
+//     if(valor%2==1){
+//         return valor+1;
+//     }
+//     return valor;
+
+// })
+
+// ages = ages.filter(valor => valor<20)
+
+
+//retorna um vetor com o valores menor que 17 e incrementa em 1;
+
+// const menores = ages
+//     .filter(valor=> valor<17)
+//     .map(valor=> valor+1);
+// console.log(menores);
+
+//  let soma = ages
+//     .filter(valor => valor <20)
+//     .reduce((soma,next)=> soma+=next)
+
+
+// poderia determinar um valor incial pra contagem
+
+// let soma1 = ages
+// .filter(valor => valor <20)
+// .reduce((soma,next)=> { return soma+=next},2000);
+
+    // console.log(soma1);
+
+// incrementar em 1 o purchaseday de tdoso objetos
+
+var clientes = [
+    {nome:"Hailton",birth:1986, genre:'M', purchaseDaysAgo:16,},
+    {nome:"lucas",birth:1940, genre:'M', purchaseDaysAgo:5,},
+    {nome:"thiago",birth:2002, genre:'M', purchaseDaysAgo:9,},
+    {nome:"lisberto",birth:1982, genre:'M', purchaseDaysAgo:24,},
+    {nome:"renata",birth:1960, genre:'F', purchaseDaysAgo:13,}
+
+];
+
+
+
+// incrementar em 1 o purchaseday de tdoso objetos
+
+// let newClietes = clientes.map(v=>({...v}));
+
+// newClietes = newClietes.map(valor =>{
+//     valor.purchaseDaysAgo+=1;
+//     return valor;
+// })
+// console.log(clientes);
+// console.log(newClietes);
+
+//console.log(clientes.filter(cliente => cliente.birth===1986));
+
+
+
+// let  ages = [15,16,19,20,23,45,69,80,50,78];
+
+// ages.splice(ages.indexOf(69),1);
+
+// console.log(ages);
+
+
+const primeiro = [1,2,3,4];
+const segundo = [5,6,7,8];
+const combinado = primeiro.concat(segundo);
+
+
+console.log(primeiro);
+console.log(segundo);
+console.log(combinado);
