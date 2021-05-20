@@ -245,13 +245,13 @@ function  exibirNumerosPrimos(entrada){
      return true;
 }
 
-let endereco = {
-    Rua:"Rodovia raposo tavares",
-    Bairro: "Butantã",
-    Cidade: "São Paulo",
-    Estado: "SP",
-    Cep:"05577-100"
-}
+// let endereco = {
+//     Rua:"Rodovia raposo tavares",
+//     Bairro: "Butantã",
+//     Cidade: "São Paulo",
+//     Estado: "SP",
+//     Cep:"05577-100"
+// }
 
 
 // let endereco = {
@@ -512,27 +512,76 @@ const cliente = {
     },
 };
 
-var endereço = [];
+// var endereço = [];
 
- endereço = {...cliente.endereco};
- console.log(endereço);
+//  endereço = {...cliente.endereco};
+//  console.log(endereço);
 
 
- const {nome, cpf, nascimento, telefone, endereco:{rua,cidade,estado,pais}} = cliente;
+// const {nome, cpf, nascimento, telefone, endereco:{rua,cidade,estado,pais}} = cliente;
 
- console.log(
-    nome, 
-    cpf, 
-    nascimento,
-    telefone,
-    rua,
-    cidade,
-    estado,
-    pais
- );
+//  console.log(
+//     nome, 
+//     cpf, 
+//     nascimento,
+//     telefone,
+//     rua,
+//     cidade,
+//     estado,
+//     pais
+//  );
 
- function imprimeEmdereçoCliente({endereco:{rua,cidade,estado,pais}}){
-     console.log(`Rua:${rua}, Cidade:${cidade} - ${estado}
-                    ${pais}`);
- }
- imprimeEmdereçoCliente(cliente);
+//  function imprimeEmdereçoCliente({endereco:{rua,cidade,estado,pais}}){
+//      console.log(`Rua:${rua}, Cidade:${cidade} - ${estado}
+//                     ${pais}`);
+//  }
+//  imprimeEmdereçoCliente(cliente);
+
+
+
+ var numeros = [1,2,3,4,5,6];
+ var numeros2 = [9,8,7,6,5,4];
+
+//  const [x1,]=numeros;
+//  console.log(x1);
+//  const [n1,,,x4]=numeros;
+//  console.log(n1,x4);
+
+ const {nome,endereco,...resto} = cliente;
+
+ console.log(nome);
+ console.log(resto);
+ console.log(endereco);
+// console.log(sum(numeros));
+
+// function sum(numeros){
+//     var soma=0;
+//     numeros.forEach(element => {
+//         soma+=element
+//     });
+//     return soma;
+// }
+
+// console.log(sum(numeros2));
+// console.log(sum(1,2,3,4,5,6));
+// function sum([...valores]){
+//     return valores.reduce((soma,next)=> soma+next);
+// }
+
+// const valoresTotal = [...numeros,...numeros2,99];
+
+// console.log(valoresTotal);
+
+
+// console.log(numeros);
+// console.log(x(numeros));
+
+
+// function x([primeiro,...valores]){
+//     return valores.map(valor => primeiro * valor );
+// }
+
+// const clienteNovo = {...cliente, updateAt: new Date()};
+// console.log(cliente);
+// console.log(clienteNovo);
+
